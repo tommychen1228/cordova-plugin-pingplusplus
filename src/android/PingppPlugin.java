@@ -1,5 +1,11 @@
 package com.myideaway.cordova.pingpp;
 
+import android.content.ComponentName;
+import android.content.Intent;
+import android.util.Log;
+
+import com.pingplusplus.android.PaymentActivity;
+
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
@@ -40,8 +46,12 @@ public class PingppPlugin extends CordovaPlugin {
         if (requestCode == REQUEST_CODE_PAYMENT) {
             if (resultCode == android.app.Activity.RESULT_OK) {
                 String result = data.getExtras().getString("pay_result");
-                //String errorMsg = data.getExtras().getString("error_msg"); // 错误信息
-                //String extraMsg = data.getExtras().getString("extra_msg"); // 错误信息
+                String errorMsg = data.getExtras().getString("error_msg"); // 错误信息
+                String extraMsg = data.getExtras().getString("extra_msg"); // 错误信息
+
+                Log.d("PingppPlugin", "result " + result);
+                Log.d("PingppPlugin", "errorMsg " + errorMsg);
+                Log.d("PingppPlugin", "extraMsg " + extraMsg);
 
                 if(result.equals("success")){
                     callbackContext.success(result);
