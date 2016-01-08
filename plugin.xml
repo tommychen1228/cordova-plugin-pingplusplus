@@ -48,5 +48,7 @@
         <source-file src="libs/android/armeabi-v7a/libentryex.so" target-dir="libs/armeabi-v7a"/>
         <source-file src="libs/android/mips/libentryex.so" target-dir="libs/mips"/>
         <source-file src="libs/android/x86/libentryex.so" target-dir="libs/x86"/>
+        <!-- src -->
+        <source-file src="src/android/PingppPlugin.java" target-dir="src/com/myideaway/cordova/pingpp"/>
     </platform>
 </plugin>
