@@ -32,12 +32,12 @@
         </config-file>
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
             <!-- Ping++ SDK 注册 -->
-            <activity  android:launchMode="singleTop" android:name="com.pingplusplus.android.PaymentActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+            <activity android:configChanges="orientation|screenSize" android:launchMode="singleTop" android:name="com.pingplusplus.android.PaymentActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
             <!-- 微信支付注册 -->
             <activity-alias android:exported="true" android:name=".wxapi.WXPayEntryActivity" android:targetActivity="com.pingplusplus.android.PaymentActivity"/>
             <!-- 支付宝注册 -->
-            <activity  android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="behind"/>
-            <activity  android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="behind"/>
+            <activity android:configChanges="orientation|keyboardHidden|navigation" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="behind"/>
+            <activity android:configChanges="orientation|keyboardHidden|navigation" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="behind"/>
         </config-file>
         <!-- libs -->
         <source-file src="libs/android/alipaySDK-20150818.jar" target-dir="libs"/>
