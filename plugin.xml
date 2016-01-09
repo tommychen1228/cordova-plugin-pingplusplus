@@ -84,7 +84,7 @@
         <source-file framework="true" src="libs/ios/Channels/UnionPay/libUPPayPlugin.a"/>
         <!-- pingxx -->
         <resource-file src="libs/ios/Pingpp.bundle"/>
-        <source-file framework="true" src="libs/ios/libpingpp.a"/>
+        <source-file framework="true" src="libs/ios/libpingppcore.a"/>
         <header-file src="libs/ios/Pingpp.h"/>
         <!-- Network -->
         <source-file framework="true" src="libs/ios/Channels/Network/libpingpp+network.a"/>
