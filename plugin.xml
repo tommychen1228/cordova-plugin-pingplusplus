@@ -66,6 +66,7 @@
         <framework src="SystemConfiguration.framework"/>
         <framework src="Security.framework"/>
         <framework src="QuartzCore.framework"/>
+        <framework src="CoreTelephony.framework"/>
         <framework src="libc++.dylib"/>
         <framework src="libz.dylib"/>
         <framework src="libsqlite3.0.dylib"/>
