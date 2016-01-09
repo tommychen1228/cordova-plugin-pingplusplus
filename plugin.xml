@@ -11,7 +11,7 @@
     <js-module name="Pingpp" src="www/pingpp.js">
         <clobbers target="Pingpp"/>
     </js-module>
-     <preference name="URL_SCHEME" />
+    <preference name="URL_SCHEME"/>
     <!-- android -->
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
@@ -98,6 +98,14 @@
                         <string>$URL_SCHEME</string>
                     </array>
                 </dict>
+            </array>
+        </config-file>
+        <config-file parent="/plist/dict" target="*-Info.plist">
+            <key>LSApplicationQueriesSchemes</key>
+            <array>
+                <string>weixin</string>
+                <string>wechat</string>
+                <string>alipay</string>
             </array>
         </config-file>
         <header-file src="src/ios/PingppPlugin.h" target-dir="PingppPlugin"/>
