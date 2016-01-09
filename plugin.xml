@@ -54,4 +54,52 @@
         <!-- src -->
         <source-file src="src/android/PingppPlugin.java" target-dir="src/com/myideaway/cordova/pingpp"/>
     </platform>
+    <platform name="ios">
+        <config-file parent="/widget" target="config.xml">
+            <feature name="PingppPlugin">
+                <param name="ios-package" value="PingppPlugin"/>
+            </feature>
+        </config-file>
+        <!-- framework -->
+        <framework src="CFNetwork.framework"/>
+        <framework src="SystemConfiguration.framework"/>
+        <framework src="Security.framework"/>
+        <framework src="QuartzCore.framework"/>
+        <framework src="libc++.dylib"/>
+        <framework src="libz.dylib"/>
+        <framework src="libsqlite3.0.dylib"/>
+        <framework src="libstdc++.tbd"/>
+        <!-- Channels -->
+        <!-- Alipay -->
+        <resource-file src="libs/ios/Channels/Alipay/AlipaySDK.bundle"/>
+        <framework custom="true" src="libs/ios/Channels/Alipay/AlipaySDK.framework"/>
+        <source-file framework="true" src="libs/ios/Channels/Alipay/libpingpp+alipay.a"/>
+        <!-- wx -->
+        <source-file framework="true" src="libs/ios/Channels/Wx/libpingpp+wx.a"/>
+        <source-file framework="true" src="libs/ios/Channels/Wx/libWeChatSDK.a"/>
+        <header-file src="libs/ios/Channels/Wx/WXApi.h"/>
+        <header-file src="libs/ios/Channels/Wx/WXApiObject.h"/>
+        <!-- UnionPay -->
+        <source-file framework="true" src="libs/ios/Channels/UnionPay/libpingpp+up.a"/>
+        <source-file framework="true" src="libs/ios/Channels/UnionPay/libUPPayPlugin.a"/>
+        <!-- pingxx -->
+        <resource-file src="libs/ios/Pingpp.bundle"/>
+        <source-file framework="true" src="libs/ios/libpingpp.a"/>
+        <header-file src="libs/ios/Pingpp.h"/>
+        <!-- Network -->
+        <source-file framework="true" src="libs/ios/Channels/Network/libpingpp+network.a"/>
+        <source-file src="libs/ios/Channels/Network/PingppURLResponse.h"/>
+        <config-file parent="CFBundleURLTypes" target="*-Info.plist">
+            <array>
+                <dict>
+                    <key>CFBundleURLSchemes</key>
+                    <array>
+                        <string>$URL_SCHEME</string>
+                    </array>
+                </dict>
+            </array>
+        </config-file>
+        <header-file src="src/ios/PingppPlugin.h" target-dir="PingppPlugin"/>
+        <source-file src="src/ios/PingppPlugin.m" target-dir="PingppPlugin"/>
+    </platform>
 </plugin>
