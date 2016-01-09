@@ -11,6 +11,7 @@
     <js-module name="Pingpp" src="www/pingpp.js">
         <clobbers target="Pingpp"/>
     </js-module>
+     <preference name="URL_SCHEME" />
     <!-- android -->
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
