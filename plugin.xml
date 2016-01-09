@@ -100,8 +100,7 @@
                 </dict>
             </array>
         </config-file>
-        <config-file parent="/plist/dict" target="*-Info.plist">
-            <key>LSApplicationQueriesSchemes</key>
+        <config-file parent="LSApplicationQueriesSchemes" target="*-Info.plist">
             <array>
                 <string>weixin</string>
                 <string>wechat</string>
